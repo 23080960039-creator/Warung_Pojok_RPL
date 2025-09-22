@@ -1,0 +1,30 @@
+ :root {
+            --primary: #2a4365;
+            --secondary: #f6ad55;
+            --dark: #1a202c;
+            --light: #f7fafc;
+        }
+        .sidebar {
+            background-color: var(--primary);
+            min-height: 100vh;
+            width: 280px;
+        }
+        .sidebar .nav-link {
+            color: white;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        .sidebar .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        .sidebar .nav-link.active {
+            background-color: var(--secondary);
+            color: var(--dark);
+            font-weight: 500;
+        }
+        main {
+            margin-left: 280px;
+            width: calc(100% - 280px);
+            padding: 20px;
+        }

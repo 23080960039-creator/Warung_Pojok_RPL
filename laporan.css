@@ -1,0 +1,157 @@
+
+/* Variabel Warna untuk Kemudahan Kustomisasi */
+:root {
+    --primary-color: #4a90e2; /* Biru Profesional */
+    --secondary-color: #50c878; /* Hijau Segar */
+    --background-color: #f4f7f9;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --header-text-color: #ffffff;
+    --border-color: #e0e6ed;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* --- PERBAIKAN: Reset CSS untuk Layout yang Konsisten --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset dan Body Styling */
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Kontainer Utama */
+.container {
+    max-width: 900px;
+    margin: 40px auto; /* Disederhanakan */
+    padding: 0 15px; /* Padding untuk mobile */
+}
+
+/* Judul Utama Halaman */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.main-title .icon {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+    font-size: 2.8rem;
+}
+
+/* Card Styling Modern */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 35px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header dengan Warna Tema */
+.card-header {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    color: var(--header-text-color);
+    border-bottom: none;
+}
+
+.card-header.monthly {
+    background-color: var(--primary-color);
+}
+
+.card-header.yearly {
+    background-color: var(--secondary-color);
+}
+
+/* Tabel yang Lebih Bersih */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead {
+    background-color: #f8f9fa;
+}
+
+.table th {
+    font-weight: 600;
+    border: none;
+    padding: 1rem 1.5rem;
+    color: #555;
+}
+
+.table td {
+    padding: 1rem 1.5rem;
+    vertical-align: middle;
+    border-top: 1px solid var(--border-color);
+}
+
+.table tbody tr:first-child td {
+    border-top: none;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f8;
+}
+
+.table .total-column {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Tombol Kembali */
+.btn-back {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- PERBAIKAN: Style :focus untuk Aksesibilitas Keyboard --- */
+.btn-back:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* --- PENAMBAHAN: Desain Responsif untuk Mobile --- */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+    .table th, .table td {
+        padding: 0.8rem 1rem;
+    }
+}

@@ -1,0 +1,25 @@
+ :root {
+            --primary: #2a4365;
+            --secondary: #f6ad55;
+        }
+        
+        .badge-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .badge-diproses {
+            background-color: #cce5ff;
+            color: #004085;
+        }
+        
+        .badge-selesai {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .badge-dibatalkan {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    
